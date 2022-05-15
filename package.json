@@ -1,0 +1,31 @@
+{
+  "name": "strops",
+  "version": "1.0.0",
+  "description": "Provides simple methods for string parsing",
+  "main": "strops.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wellloy1/strops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wellloy1/strops/issues",
+    "email": "wellloy1@gmail.com"
+  },
+  "keywords": [
+    "substrings",
+    "strings",
+    "parsing",    
+    "substring-replace",
+    "substring-remove",
+    "substring-search",
+    "edit-html",
+    "remove-tags",
+    "replace-words",
+    "edit-text"
+  ],
+  "author": "Max Shane <wellloy1@gmail.com>",
+  "license": "MIT"
+}
