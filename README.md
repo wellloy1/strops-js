@@ -59,7 +59,7 @@ const text = `<table>
 
 ### remove:
 ```js
-const newText = str.remove(text, '<b>', '</b>')
+const newText = str.remove(text, '<b>', '</b>', 'class-1')
 
 // returns:
 // <table>
