@@ -24,11 +24,6 @@ const str = require('strops')
 const { replace, remove } = require('strops')
 ```
 
-### Browser
-```js
-import * as str from '<path-to-the-script>/strops.js';
-```
-
 ## :zap: Methods
 
 | Method | Description | Params |
