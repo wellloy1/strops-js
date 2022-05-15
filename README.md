@@ -157,7 +157,7 @@ const newText = str.getIndexesAtoB(text, '<tr>', '</tr>')
 ## :dart: Coming soon:
 
 - Tests
-- Methods with a simple condition/RegExp integration
+- Methods with a simple conditions/RegExp integration
 - Specific methods for an HTML tags
 
 ## License
