@@ -1,6 +1,6 @@
 # :hocho: Strops (String Operations)
 
-<p>Provides simple and the most useful methods to string operations:<br/>
+<p>Provides simple and methods for the most useful operations with substrings:<br/>
 - remove, replace, get from A to B, get from A to B exclusive and other.
 <br/>For an example, you can use it for an HTML page repairing or restyling old websites:<br/>
 - replacing CSS styles, appending blocks into html, deleting specific tags with inners, and etc.</p>
