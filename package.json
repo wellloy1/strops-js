@@ -1,7 +1,7 @@
 {
   "name": "strops",
   "version": "1.0.0",
-  "description": "Provides simple methods for string parsing",
+  "description": "Provides simple and the most useful methods to string operations in JavaScript / Node.js",
   "main": "strops.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
