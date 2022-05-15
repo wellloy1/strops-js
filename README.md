@@ -98,7 +98,7 @@ const newText = str.getAtoB(text, '<tr>', '</tr>')
 
 // You can easily get first entry by:
 
-newText[0]
+const newText = str.getAtoB(text, '<tr>', '</tr>')[0]
 
 // returns:
 // <tr><td class="class-1"><b>JavaScript</b></td></tr>
@@ -106,10 +106,14 @@ newText[0]
 
 ### getAtoBInner:
 ```js
-const newText = str.getAtoBInner(text, '<tr>', '</tr>')[0]
+const newText = str.getAtoBInner(text, '<tr>', '</tr>')
 
 // returns:
-// <td class="class-1"><b>JavaScript</b></td>
+// [
+//  '<td class="class-1"><b>JavaScript</b></td>',
+//  '<td class="class-2">Java</td>',
+//  '<td class="class-1">Python</td>'
+// ]
 ```
 
 ### getIndexes:
