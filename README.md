@@ -55,7 +55,6 @@ const text = `<table>
 <tr><td class="class-2">Java</td></tr>
 <tr><td class="class-1">Python</td></tr>
 </table>`
-`
 ```
 
 ### remove:
