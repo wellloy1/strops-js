@@ -1,6 +1,6 @@
 {
   "name": "strops",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Provides simple and the most useful methods to string operations in JavaScript / Node.js",
   "main": "strops.js",
   "scripts": {
