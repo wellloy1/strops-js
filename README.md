@@ -14,7 +14,7 @@ But in many cases it can be more easy and efficient.
 ## :pushpin: Installation
 
 ```bash
-$ npm install strops
+$ npm i strops
 ```
 
 ### Node.js
