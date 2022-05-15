@@ -5,7 +5,7 @@ function getIndexesOfAllSubstrings (str, ...substrings) {
 	for (let searchingSubstring of substrings) {
 		let lastIndex = 0
 		while (true) {
-			entryIndex = str.indexOf(searchingSubstring, lastIndex)
+			let entryIndex = str.indexOf(searchingSubstring, lastIndex)
 			if (entryIndex == -1) break
 			lastIndex = entryIndex + searchingSubstring.length
 			allSubstrings[entryIndex] = lastIndex	
@@ -20,8 +20,8 @@ function getIndexesOfAllSubstringsFromAtoBExclusive(str, a, b) {
 	const allSubstrings = {}
 	let lastIndex = 0
 	while (true) {
-		a_index = str.indexOf(a, lastIndex) + a.length
-		b_index = str.indexOf(b, lastIndex + a.length)
+		let a_index = str.indexOf(a, lastIndex) + a.length
+		let b_index = str.indexOf(b, lastIndex + a.length)
 		if (str.indexOf(a, lastIndex) == -1 || b_index == -1) break
 
 		lastIndex = b_index + b.length
@@ -36,8 +36,8 @@ function getIndexesOfAllSubstringsFromAtoB(str, a, b) {
 	const allSubstrings = {}
 	let lastIndex = 0
 	while (true) {
-		a_index = str.indexOf(a, lastIndex)
-		b_index = str.indexOf(b, lastIndex + a.length) + b.length
+		let a_index = str.indexOf(a, lastIndex)
+		let b_index = str.indexOf(b, lastIndex + a.length) + b.length
 		if (a_index == -1 || str.indexOf(b, lastIndex) == -1) break
 
 		lastIndex = b_index
@@ -49,7 +49,7 @@ function getIndexesOfAllSubstringsFromAtoB(str, a, b) {
 // Get all substrings between A and B (not includes A and B)
 // returns <array>
 function getAllSubstringsFromAtoBExclusive(str, a, b) {
-	let arr = []
+	const arr = []
 	const entrySlices = getIndexesOfAllSubstringsFromAtoBExclusive(str, a, b)
 		for (let startIndex in entrySlices) {
 			arr.push(str.substring(startIndex, entrySlices[startIndex]))
@@ -60,7 +60,7 @@ function getAllSubstringsFromAtoBExclusive(str, a, b) {
 // Get all substrings from A to B (includes A and B)
 // returns <array>
 function getAllSubstringsFromAtoB(str, a, b) {
-	let arr = []
+	const arr = []
 	const entrySlices = getIndexesOfAllSubstringsFromAtoBExclusive(str, a, b)
 		for (let startIndex in entrySlices) {
 			arr.push(str.substring(startIndex - a.length, entrySlices[startIndex] + b.length))
