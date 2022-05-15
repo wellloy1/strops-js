@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wellloy1/strops.git"
+    "url": "https://github.com/wellloy1/strops-js.git"
   },
   "bugs": {
-    "url": "https://github.com/wellloy1/strops/issues",
+    "url": "https://github.com/wellloy1/strops-js/issues",
     "email": "wellloy1@gmail.com"
   },
   "keywords": [
