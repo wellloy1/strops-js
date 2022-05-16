@@ -65,7 +65,7 @@ const newText = str.remove(text, '<b>', '</b>', 'class-1')
 
 // Also you can pass an array of substrings to get the same result
 // Just use the spread operator to expand the array out to the parameters
-const newText = str.remove(text, ...['<b>', '</b>'])
+const newText = str.remove(text, ...['<b>', '</b>', 'class-1'])
 ```
 
 ### replace:
