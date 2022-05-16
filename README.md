@@ -1,4 +1,6 @@
 # :hocho: Strops (String Operations)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js?ref=badge_shield)
+
 
 <p>Provides simple methods for the most useful operations with substrings:<br/>
 - remove, replace, get from A to B, get from A to B exclusive and other.
@@ -159,3 +161,6 @@ const newText = str.getIndexesAtoB(text, '<tr>', '</tr>')
 ## License
 Copyright (c) 2022 [Max Shane](https://github.com/wellloy1).
 Strops is [MIT licensed](./LICENSE).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js?ref=badge_large)
