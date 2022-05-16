@@ -1,5 +1,5 @@
 # :hocho: Strops (String Operations)
-
+[![npm version](https://badge.fury.io/js/strops.svg)](https://badge.fury.io/js/strops)
 [![Known Vulnerabilities](https://snyk.io/test/github//wellloy1/strops-js/badge.svg)](https://snyk.io/test/github/wellloy1/strops-js)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js?ref=badge_shield)
 
