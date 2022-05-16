@@ -1,6 +1,6 @@
 # :hocho: Strops (String Operations)
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js?ref=badge_small)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwellloy1%2Fstrops-js?ref=badge_shield)
 
 <p>Provides simple methods for the most useful operations with substrings:<br/>
 - remove, replace, get from A to B, get from A to B exclusive and other.
