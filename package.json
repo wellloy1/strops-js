@@ -1,6 +1,6 @@
 {
 	"name": "strops",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Provides simple and the most useful methods to string operations in JavaScript / Node.js",
 	"author": "Max Shane <wellloy1@gmail.com>",
 	"license": "MIT",

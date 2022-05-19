@@ -23,7 +23,7 @@ function getIndexesOfAllSubstrings(str, ...substrings) {
 }
 
 /**
- * Get all index slices of all substring between A and B (default: inclusive)
+ * Get index pairs of all substring between A and B (not includes A and B)
  * returns { <startIndex>: <endIndex>, ... }
  *
  * @param {string} str
@@ -46,7 +46,7 @@ function getIndexesOfAllSubstringsFromAtoBExclusive(str, a, b) {
 }
 
 /**
- * Get all index slices of all substring from A to B (includes A and B)
+ * Get index pairs of all substrings from A to B (includes A and B)
  * returns { <startIndex>: <endIndex>, ... }
  *
  * @param {string} str
@@ -129,7 +129,6 @@ function removeAllSubstringsFromAtoBExclusive(str, a, b) {
 	return string
 }
 
-//
 /**
  * Removes all substrings from A to B (includes A and B)
  *

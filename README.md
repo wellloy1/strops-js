@@ -43,6 +43,7 @@ const { replace, remove } = require('strops')
 | `getIndexesAtoB`      | Returns index pairs for all substrings from A to B as a `<key: startIndex, value: endIndex>`           | `<string, substring_A, substring_B>`    |
 | `getIndexesAtoBInner` | Returns index pairs for all substrings from A to B as a `<key: startIndex, value: endIndex>` exclusive | `<string, substring_A, substring_B>`    |
 
+</br>
 ## :blue_book: Usage
 
 ### Common snippet for examples below:
@@ -190,7 +191,6 @@ const newText = str.getIndexesAtoB(text, '<tr>', '</tr>')
 ## :dart: Coming soon:
 
 - Tests
-- Typings
 - Methods with a simple conditions/RegExp integration
 - Specific methods for an HTML tags
 
