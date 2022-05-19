@@ -4,13 +4,13 @@ declare function getIndexesOfAllSubstrings(
 ): {}
 declare function getIndexesOfAllSubstringsFromAtoBExclusive(
 	str: string,
-	a: string[],
-	b: string[]
+	a: string,
+	b: string
 ): {}
 declare function getIndexesOfAllSubstringsFromAtoB(
 	str: string,
-	a: string[],
-	b: string[]
+	a: string,
+	b: string
 ): {}
 declare function getAllSubstringsFromAtoBExclusive(
 	str: string,
@@ -19,18 +19,18 @@ declare function getAllSubstringsFromAtoBExclusive(
 ): string[]
 declare function getAllSubstringsFromAtoB(
 	str: string,
-	a: string[],
-	b: string[]
+	a: string,
+	b: string
 ): string[]
 declare function removeAllSubstringsFromAtoBExclusive(
 	str: string,
-	a: string[],
-	b: string[]
+	a: string,
+	b: string
 ): string
 declare function removeAllSubstringsFromAtoB(
 	str: string,
-	a: string[],
-	b: string[]
+	a: string,
+	b: string
 ): string
 declare function removeAllSubstrings(
 	str: string,
@@ -38,7 +38,7 @@ declare function removeAllSubstrings(
 ): string
 declare function replaceAllSubstrings(
 	str: string,
-	newSubstring: string[],
+	newSubstring: string,
 	...substrings: string[]
 ): string
 
