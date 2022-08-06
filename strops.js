@@ -195,15 +195,15 @@ function replaceAllSubstrings(str, newSubstring, ...substrings) {
 }
 
 // Short Aliases:
-exports.getIndexes = getIndexesOfAllSubstrings
-exports.getIndexesAtoBInner = getIndexesOfAllSubstringsFromAtoBExclusive
-exports.getIndexesAtoB = getIndexesOfAllSubstringsFromAtoB
+export { getIndexesOfAllSubstrings }
+export { getIndexesOfAllSubstringsFromAtoBExclusive as getIndexesAtoBInner }
+export { getIndexesOfAllSubstringsFromAtoB as getIndexesAtoB }
 
-exports.getAtoBInner = getAllSubstringsFromAtoBExclusive
-exports.getAtoB = getAllSubstringsFromAtoB
+export { getAllSubstringsFromAtoBExclusive as getAtoBInner }
+export { getAllSubstringsFromAtoB as getAtoB }
 
-exports.removeAtoBInner = removeAllSubstringsFromAtoBExclusive
-exports.removeAtoB = removeAllSubstringsFromAtoB
+export { removeAllSubstringsFromAtoBExclusive as removeAtoBInner }
+export { removeAllSubstringsFromAtoB as removeAtoB }
 
-exports.remove = removeAllSubstrings
-exports.replace = replaceAllSubstrings
+export { removeAllSubstrings as remove }
+export { replaceAllSubstrings as replace }

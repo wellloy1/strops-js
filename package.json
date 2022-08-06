@@ -1,6 +1,6 @@
 {
 	"name": "strops",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"description": "Provides simple and the most useful methods to string operations in JavaScript / Node.js",
 	"author": "Max Shane <wellloy1@gmail.com>",
 	"license": "MIT",
@@ -37,6 +37,7 @@
 		"url": "https://github.com/wellloy1/strops-js/issues",
 		"email": "wellloy1@gmail.com"
 	},
+	"type": "module",
 	"devDependencies": {
 		"eslint": "^8.15.0",
 		"eslint-config-prettier": "^8.5.0",
