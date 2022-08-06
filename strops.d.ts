@@ -1,93 +1,81 @@
 /**
- * Get index pairs of all substrings
- * returns { <startIndex>: <endIndex>, ... }
+ * Finds index pairs of all substrings which match to arguments from  '...substringsToFind'.
+ * Returns { startIndex: endIndex, ... }
  */
-declare function getIndexesOfAllSubstrings(
-	str: string,
-	...substrings: string[]
+declare function getIndexes(
+	sourceString: string,
+	...substringsToFind: string[]
 ): {}
 
 /**
- * Get index pairs of all substrings between A and B (not includes A and B)
- * returns { <startIndex>: <endIndex>, ... }
+ * Finds index pairs of all substrings from A to B (including A and B).
+ * Returns { startIndex: endIndex, ... }
  */
-declare function getIndexesOfAllSubstringsFromAtoBExclusive(
-	str: string,
+declare function getIndexesAtoB(sourceString: string, a: string, b: string): {}
+
+/**
+ * Finds index pairs of all substring between A and B (not including A and B)
+ * Returns { startIndex: endIndex, ... }
+ */
+declare function getIndexesAtoBInner(
+	sourceString: string,
 	a: string,
 	b: string
 ): {}
 
 /**
- * Get index pairs of all substrings from A to B (includes A and B)
- * returns { <startIndex>: <endIndex>, ... }
+ * Finds all substrings from A to B (including A and B)
  */
-declare function getIndexesOfAllSubstringsFromAtoB(
-	str: string,
-	a: string,
-	b: string
-): {}
+declare function getAtoB(sourceString: string, a: string, b: string): string[]
 
 /**
- * Gets all substrings between A and B (not includes A and B)
+ * Finds all substrings between A and B (not including A and B)
  */
-declare function getAllSubstringsFromAtoBExclusive(
-	str: string,
+declare function getAtoBInner(
+	sourceString: string,
 	a: string,
 	b: string
 ): string[]
 
 /**
- * Get all substrings from A to B (includes A and B)
+ * Removes all substrings which match to arguments from '...substringsToRemove'
  */
-declare function getAllSubstringsFromAtoB(
-	str: string,
-	a: string,
-	b: string
-): string[]
-
-/**
- * Removes all substrings between A and B (not includes A and B)
- */
-declare function removeAllSubstringsFromAtoBExclusive(
-	str: string,
-	a: string,
-	b: string
+declare function remove(
+	sourceString: string,
+	...substringsToRemove: string[]
 ): string
 
 /**
- * Removes all substrings from A to B (includes A and B)
+ * Removes all substrings between A and B (not including A and B)
  */
-declare function removeAllSubstringsFromAtoB(
-	str: string,
+declare function removeAtoBInner(
+	sourceString: string,
 	a: string,
 	b: string
 ): string
 
 /**
- * Removes all substrings
+ * Removes all substrings from A to B (including A and B)
  */
-declare function removeAllSubstrings(
-	str: string,
-	...substrings: string[]
-): string
+declare function removeAtoB(sourceString: string, a: string, b: string): string
 
 /**
- * Replaces all substrings
+ * Replaces all substrings which match to arguments from '...substringsToReplace' with 'newSubstring'
  */
-declare function replaceAllSubstrings(
-	str: string,
+declare function replace(
+	sourceString: string,
 	newSubstring: string,
-	...substrings: string[]
+	...substringsToReplace: string[]
 ): string
 
 export {
-	getIndexesOfAllSubstrings as getIndexes,
-	getIndexesOfAllSubstringsFromAtoBExclusive as getIndexesAtoBInner,
-	getIndexesOfAllSubstringsFromAtoB as getIndexesAtoB,
-	getAllSubstringsFromAtoBExclusive as getAtoBInner,
-	getAllSubstringsFromAtoB as getAtoB,
-	removeAllSubstringsFromAtoBExclusive as removeAtoBInner,
-	removeAllSubstringsFromAtoB as removeAtoB,
-	removeAllSubstrings as remove,
-	replaceAllSubstrings as replace,
+	getIndexes,
+	getIndexesAtoB,
+	getIndexesAtoBInner,
+	getAtoB,
+	getAtoBInner,
+	remove,
+	removeAtoBInner,
+	removeAtoB,
+	replace,
 }

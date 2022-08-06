@@ -16,7 +16,7 @@
 		"replace-words",
 		"edit-text"
 	],
-	"main": "strops.js",
+	"main": "strops.cjs",
 	"types": "strops.d.ts",
 	"readmeFilename": "README.md",
 	"files": [
@@ -37,7 +37,6 @@
 		"url": "https://github.com/wellloy1/strops-js/issues",
 		"email": "wellloy1@gmail.com"
 	},
-	"type": "module",
 	"devDependencies": {
 		"eslint": "^8.15.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -45,5 +44,6 @@
 		"eslint-plugin-import": "^2.26.0",
 		"prettier": "^2.6.2",
 		"typescript": "^4.6.4"
-	}
+	},
+	"type": "module"
 }

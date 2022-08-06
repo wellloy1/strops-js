@@ -21,12 +21,16 @@ But in many cases it can be more easy and efficient.
 $ npm i strops
 ```
 
-### Node.js
-
 ```js
-const str = require('strops')
-// or you can import just the methods you need:
+// CommonJS
+const strops = require('strops')
+// or:
 const { replace, remove } = require('strops')
+
+// ESM
+import * as strops from 'strops'
+// or:
+import { replace, remove } from 'strops'
 ```
 
 ## :zap: Methods
@@ -35,22 +39,23 @@ const { replace, remove } = require('strops')
 | --------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------- |
 | `remove`              | Removes all substrings and returns `<string>`                                                          | `<string, ...substrings>`               |
 | `replace`             | Replaces all substrings with new substring and returns `<string>`                                      | `<string, newSubstring, ...substrings>` |
-| `getAtoB`             | Returns all substrings from A to B as an `<array>` of `<string>`                                       | `<string, substring_A, substring_B>`    |
-| `getAtoBInner`        | Returns all substrings from A to B as an `<array>` of `<string>` exclusive                             | `<string, substring_A, substring_B>`    |
-| `removeAtoB`          | Removes all substrings from A to B as a `<string>`                                                     | `<string, substring_A, substring_B>`    |
-| `removeAtoBInner`     | Removes all substrings from A to B as a `<string>` exclusive                                           | `<string, substring_A, substring_B>`    |
-| `getIndexes`          | Returns index pairs for all substrings as a `<key: startIndex, value: endIndex>`                       | `<string, ...substrings>`               |
-| `getIndexesAtoB`      | Returns index pairs for all substrings from A to B as a `<key: startIndex, value: endIndex>`           | `<string, substring_A, substring_B>`    |
-| `getIndexesAtoBInner` | Returns index pairs for all substrings from A to B as a `<key: startIndex, value: endIndex>` exclusive | `<string, substring_A, substring_B>`    |
+| `getAtoB`             | Returns all substrings from A to B as an `<array>` of `<string>`                                       | `<string, a, b>`    |
+| `getAtoBInner`        | Returns all substrings from A to B as an `<array>` of `<string>` exclusive                             | `<string, a, b>`    |
+| `removeAtoB`          | Removes all substrings from A to B as a `<string>`                                                     | `<string, a, b>`    |
+| `removeAtoBInner`     | Removes all substrings from A to B as a `<string>` exclusive                                           | `<string, a, b>`    |
+| `getIndexes`          | Returns index pairs for all substrings as a `{startIndex: endIndex, ...}`                       | `<string, ...substrings>`               |
+| `getIndexesAtoB`      | Returns index pairs for all substrings from A to B as a `{startIndex: endIndex, ...}`           | `<string, a, a>`    |
+| `getIndexesAtoBInner` | Returns index pairs for all substrings from A to B as a `{startIndex: endIndex, ...}` exclusive | `<string, a, b>`    |
 
-
+## :heart_eyes: Pretty tooltips in your IDE
+![Alt-текст](https://pbs.twimg.com/media/FZfFax9UEAAuJ0A?format=png "Screenshot_2")
 
 ## :blue_book: Usage
 
 ### Common snippet for examples below:
 
 ```js
-const str = require('strops')
+const strops = require('strops')
 
 const text = `<table>
 <tr><td class="class-1"><b>JavaScript</b></td></tr>
@@ -62,7 +67,7 @@ const text = `<table>
 ### remove:
 
 ```js
-const newText = str.remove(text, '<b>', '</b>', 'class-1')
+const newText = strops.remove(text, '<b>', '</b>', 'class-1')
 
 // returns:
 // <table>
@@ -73,13 +78,13 @@ const newText = str.remove(text, '<b>', '</b>', 'class-1')
 
 // Also you can pass an array of substrings to get the same result
 // Just use the spread operator to expand the array out to the parameters
-const newText = str.remove(text, ...['<b>', '</b>', 'class-1'])
+const newText = strops.remove(text, ...['<b>', '</b>', 'class-1'])
 ```
 
 ### removeAtoB:
 
 ```js
-const newText = str.removeAtoB(text, '<tr>', '</tr>')
+const newText = strops.removeAtoB(text, '<tr>', '</tr>')
 
 // returns:
 // <table>
@@ -92,7 +97,7 @@ const newText = str.removeAtoB(text, '<tr>', '</tr>')
 ### removeAtoBInner:
 
 ```js
-const newText = str.removeAtoBInner(text, '<tr>', '</tr>')
+const newText = strops.removeAtoBInner(text, '<tr>', '</tr>')
 
 // returns:
 // <table>
@@ -105,7 +110,7 @@ const newText = str.removeAtoBInner(text, '<tr>', '</tr>')
 ### replace:
 
 ```js
-const newText = str.replace(text, 'Rust', 'Python', 'C++', 'JavaScript')
+const newText = strops.replace(text, 'Rust', 'Python', 'C++', 'JavaScript')
 
 // returns:
 // <table>
@@ -118,7 +123,7 @@ const newText = str.replace(text, 'Rust', 'Python', 'C++', 'JavaScript')
 ### getAtoB:
 
 ```js
-const newText = str.getAtoB(text, '<tr>', '</tr>')
+const newText = strops.getAtoB(text, '<tr>', '</tr>')
 
 // returns:
 // [
@@ -129,7 +134,7 @@ const newText = str.getAtoB(text, '<tr>', '</tr>')
 
 // You can easily get first entry by:
 
-const newText = str.getAtoB(text, '<tr>', '</tr>')[0]
+const newText = strops.getAtoB(text, '<tr>', '</tr>')[0]
 
 // returns:
 // <tr><td class="class-1"><b>JavaScript</b></td></tr>
@@ -138,7 +143,7 @@ const newText = str.getAtoB(text, '<tr>', '</tr>')[0]
 ### getAtoBInner:
 
 ```js
-const newText = str.getAtoBInner(text, '<tr>', '</tr>')
+const newText = strops.getAtoBInner(text, '<tr>', '</tr>')
 
 // returns:
 // [
@@ -151,7 +156,7 @@ const newText = str.getAtoBInner(text, '<tr>', '</tr>')
 ### getIndexes:
 
 ```js
-const newText = str.getIndexes(text, '<tr>')
+const newText = strops.getIndexes(text, '<tr>')
 
 // returns:
 // { '8': 12, '60': 64, '99': 103 }
@@ -172,7 +177,7 @@ for (let key in indexes) {
 ### getIndexesAtoBInner:
 
 ```js
-const newText = str.getIndexesAtoBInner(text, '<tr>', '</tr>')
+const newText = strops.getIndexesAtoBInner(text, '<tr>', '</tr>')
 
 // returns:
 // { '12': 54, '64': 93, '103': 134 }
@@ -182,7 +187,7 @@ const newText = str.getIndexesAtoBInner(text, '<tr>', '</tr>')
 ### getIndexesAtoB:
 
 ```js
-const newText = str.getIndexesAtoB(text, '<tr>', '</tr>')
+const newText = strops.getIndexesAtoB(text, '<tr>', '</tr>')
 
 // returns:
 // { '8': 59, '60': 98, '99': 139 }
