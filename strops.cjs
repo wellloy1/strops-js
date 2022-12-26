@@ -36,9 +36,8 @@ function getIndexesAtoBInner(sourceString, a, b) {
 	let lastIndex = 0
 	while (true) {
 		const indexA = sourceString.indexOf(a, lastIndex) + a.length
-		const indexB = sourceString.indexOf(b, lastIndex + a.length)
+		const indexB = sourceString.indexOf(b, lastIndex + indexA)
 		if (sourceString.indexOf(a, lastIndex) === -1 || indexB === -1) break
-
 		lastIndex = indexB + b.length
 		allSubstrings[indexA] = indexB
 	}
